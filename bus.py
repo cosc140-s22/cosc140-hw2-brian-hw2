@@ -14,20 +14,23 @@ stops = input("How many stops will there be? ")
 distance = float(distance)
 stops = int(stops)
 
-traveltime = distance/0.01111 - 30*stops
+totalSeconds = hours*3600+minutes*60
+travelSeconds = distance/.01111111111+30*stops
 
-secondstravelled = (traveltime%(3600)%60)
-minutestravelled = int(traveltime%(3600)//60%60)
-hourstravelled = int(traveltime//3600)
+totalSeconds += travelSeconds
 
-fminutes = int(minutestravelled + minutes)
+seconds = int(totalSeconds)
 
-if fminutes > 59:
-  hourstravelled+=1
-  fminutes=fminutes%60
-secondstravelled = int(secondstravelled)
-print("Arrival time is: ",int(hourstravelled+hours),":",fminutes,":",secondstravelled)
+secondsS = seconds%(3600*24)%60
 
+minutes = seconds%(3600*24)//60%60
+hours = seconds%86400//3600
+days = seconds//86400
+
+if days >0:
+  hours - 24
+  
+print("Arrival time:",hours, ":", minutes, ":", secondsS)
 
 
 
