@@ -13,5 +13,9 @@ I really liked this homework. I think it was a great way to learn more about pyt
 
 ## Feedback
 
-Once you commit and submit your work to Github, I'll update this section with feedback.
+N (not yet)
+
+Good work.  On the bus problem, the computations aren't quite right.  I'd suggest first computing the total time in seconds and then going from there to figure out when the trip ends.  There's a floating point computation early on that is likely resulting in some errors (floating point computations are inexact), and while some examples work out correctly, most of the examples listed in the homework don't quite work correctly. 
+
+Nice job on the face!  I liked what you did with that problem.
 
